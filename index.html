@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fiatmatch</title>
     <link rel="stylesheet" href="fiat.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
 <header>
@@ -115,10 +116,13 @@
 <section>
  <div class="ots1"></div>
             <div class="sect1">
-                <div class="update">UPDATE</div>
-                <div class="top-up">Mobile Top-up feature available now!</div>
-                <div class="get">
-                    <h1 data-tilt>
+                <div class="update" data-aos="flip-right" data-aos-duration="1500"
+    data-aos-easing="ease-in-out">UPDATE</div>
+                <div class="top-up" data-aos="flip-right" data-aos-duration="1500"
+    data-aos-easing="ease-in-out">Mobile Top-up feature available now!</div>
+                <div class="get" data-aos="flip-right" data-aos-duration="1000"
+    data-aos-easing="ease-in-out">
+                    <h1>
                         Get the best international money transfer offers, every single time.
                     </h1>
                     <p>
@@ -142,7 +146,8 @@
                     <div class="ots"></div>
                     <img data-tilt class="floats" src="images/float.png" alt="">
                 </div>
-    <span class="rgis"><img class="reg" src="images/985px-Flag_of_Canada_leaf.svg.png" alt="register"> <i>Registered and regulated by FINTRAC #M21366886</i>
+    <span class="rgis" data-aos="flip-right" data-aos-duration="1000"
+    data-aos-easing="ease-in-out"><img class="reg" src="images/985px-Flag_of_Canada_leaf.svg.png" alt="register"> <i>Registered and regulated by FINTRAC #M21366886</i>
            <d class="ots1"></div>
 </section>
 
@@ -164,7 +169,8 @@
         </div>
     </div>
     <div class="create">
-       <h1 class="grad"> We created Fiatmatch because you work too hard not</h1>
+       <h1 class="grad" data-aos="flip-left" data-aos-duration="1500"
+    data-aos-easing="ease-in-out"> We created Fiatmatch because you work too hard not</h1>
     <h1 class="grad">to get the best deals for your money.</h1>
     <div class="under"></div>
     </div>
@@ -202,13 +208,13 @@
         <img class="hand" src="images/Group-35747-1.png" alt="">
     </div>
     <div class="fraction">
-        <h1 data-tilt="">
+        <h1>
             ...at a fraction of the cost
         </h1>
         <div class="under6"></div>
         <p>Pay a small fee per transaction or choose any of our subscription plans tailored to save you more money as your transfer
         needs increases</p>
-        <img class="cash" src="images/cash.png" alt="">
+        <img class="cash" src="images/cash.png" alt="cash">
     </div>
 </section>
 
@@ -233,19 +239,19 @@
 
 <section class="sliders">
     <div class="row">
-        <div onclick="currentSlide(1)" class="cloumn swap">
-           <h1> Mid market rate </h1>
+        <div onclick="slide()" class="cloumn swap">
+           <a href="#mark"> Mid market rate </a>
         </div>
-        <div onclick="currentSlide(2)" class="cloumn swap">
-           <h1> Multiple deals</h1>
+        <div onclick="slide(1)" class="cloumn swap">
+           <a href="#multi"> Multiple deals </a>
         </div>
-        <div onclick="currentSlide(3)" class="cloumn swap">
-           <h1> Set your rate</h1>
+        <div onclick="slide(2)" class="cloumn swap">
+           <a href="#set"> Set your rate </a>
         </div>
-        <div onclick="currentSlide(4)" class="cloumn swap">
-           <h1> Secured by escrow </h1>
+        <div onclick="slide(3)" class="cloumn swap">
+           <a href="#secured"> Secured by escrow </a>
         </div>
-        <div class="cloumn dot">
+        <div class="cloumn">
             <h1> </h1>
         </div>
     </div>
@@ -255,7 +261,7 @@
 
     <div class="content">
         <div class="flex">
-        <div class="wraps">
+        <div id="mark" class="wraps">
             <div class="mid">
                     <h1>Displayed live mid-market rate</h1>
                     <p>Every day, we display the live mid-market rate on our mobile and web app, serving as a guide as you explore available
@@ -268,13 +274,13 @@
         </div>
 
         <div class="wraps">
-            <div class="mid">
+            <div id="multi" class="mid">
                 <h1>Access multiple deals with great rates</h1>
                 <p>Unlike other platforms where you’re stuck with the offer you’re presented with, on FiatMatch, you’ll have access to
                 several offers from people like you looking to exchange and send money quickly at fair rates.</p>
             <img class="set" src="images/ggg.png" alt=""></div>
         </div>
-        <div class="wraps">
+        <div id="set" class="wraps">
             <div class="mid">
                 <h1>Set your rate</h1>
                 <p>Don’t like any of the available offers? No problem. Set your own rate and we’ll match you with community members that
@@ -284,7 +290,7 @@
                 <img class="set" src="images/img-11@2x.png" alt="">
             </div>
         </div>
-        <div class="wraps">
+        <div id="secured" class="wraps">
             <div class="mid">
                 <h1>Secured by escrow</h1>
                 <p>We act as an escrow to ensure both parties fulfill the terms of their agreement.
@@ -306,11 +312,9 @@
 
             <div class="wrapz">
                 <img class="shut" src="images/shutterstock_1953675967_1-removebg.png" alt="">
-                <div class="midd">
                     <h1>Local rather than cross-border</h1>
                     <p>Each transfer is processed as a local rather than international transfer, thus saving you huge costs on cross-border
                     fees. This means you get to do more with your money.</p>
-                 </div>
             </div>
 
             <div class="wrapz">
@@ -345,7 +349,7 @@
     
     <div class="container"> 
 
-        <div onclick="current(1)" class="cover">
+        <div onclick="currentSlide(1)" class="cover">
             <div class="images">
                 <img class="mig" src="images/remmitance.png" alt="">
             </div>
@@ -353,9 +357,8 @@
                 Local Transfers
             </div>
         </div>
-        <div class="under9"></div>
 
-        <div onclick="current(2)" class="cover">
+        <div onclick="currentSlide(2)" class="cover">
             <div class="images">
                 <img class="mig" src="images/remmitance.png" alt="">
             </div>
@@ -363,9 +366,8 @@
                 Peer to Peer
             </div>
         </div>
-        <div class="under10"></div>
 
-        <div onclick="current(3)" class="cover">
+        <div onclick="currentSlide(3)" class="cover">
             <div class="images">
                 <img class="mig" src="images/remmitance.png" alt="">
             </div>
@@ -373,9 +375,8 @@
                 Select from  <br> available Offers
             </div>
         </div>
-        <div class="under11"></div>
 
-        <div onclick="current(4)" class="cover">
+        <div onclick="currentSlide(4)" class="cover">
             <div class="images">
                 <img class="mig" src="images/remmitance.png" alt="">
             </div>
@@ -383,13 +384,13 @@
                 Affordable <br> Plans
             </div>
         </div>
-        <div class="under12"></div>
 
     </div>
 </section>
 
 <section class="how-to">
-    <div class="hw">
+    <div class="hw" data-aos="flip-right" data-aos-duration="1500"
+    data-aos-easing="ease-in-out">
         <h1>How to join the Fiatmatch community</h1>
     </div>
 </section>
@@ -446,19 +447,21 @@
     </div>
 
 <section class="community">
+    <img class="img2" src="images/img-2.jpeg" alt="">
     <div class="comm">
         Community Benefits
     </div>
 
     <div class="heych">
-        <h1 class="grad">Enjoy a range of support to do more with your hard-earned money and thrive.</h1>
+        <h1 class="grad" data-aos="flip-right" data-aos-duration="1500"
+    data-aos-easing="ease-in-out">Enjoy a range of support to do more with your hard-earned money and thrive.</h1>
     </div>
 
 <div class="flexme">
 
     <div class="cotain">
         <div class="zoom">
-            <img  class="sz" src="images/blog.png" alt="">
+            <img  class="sz" src="images/Bookshelf_perspective_matte.png" alt="">
             <p>The Immigrants Library</p>
         </div>
         <div class="pee">
@@ -470,7 +473,7 @@
 
     <div class="cotain">
         <div class="zoom">
-            <img class="sz" class="sz" src="images/blog.png" alt="">
+            <img class="sz" class="sz" src="images/Message_perspective_matte_s-1.png" alt="">
             <p>Human Support</p>
         </div>
         <div class="pee">
@@ -481,7 +484,7 @@
 
     <div class="cotain">
         <div class="zoom">
-            <img class="sz" src="images/blog.png" alt="">
+            <img class="sz" src="images/Cake_perspective_matte_s.png" alt="">
             <p>Exclusive events</p>
         </div>
         <div class="pee">
@@ -492,7 +495,7 @@
 
     <div class="cotain">
         <div class="zoom">
-            <img class="sz" src="images/blog.png" alt="">
+            <img class="sz" src="images/Microphone_perspective_matte-1.png" alt="">
             <p>#Fiatvault podcast</p>
         </div>
         <div class="pee">
@@ -516,8 +519,10 @@
     <div class="groups">
 
                 <div class="group-one">
+                    <div class="hov">
                     <div class="purpl" > <img src="images/icons8-right-arrow-30.png" alt=""></div>
                     <img class="imghov" src="/images/simon-lucas-t_oXr6y8H-I-unsplash-370x470 (1).jpg" alt="">
+                    </div>
                     <div class="terxt">
                            
                         <div class="mth">
@@ -530,8 +535,10 @@
                 </div>
 
                 <div class="group-two">
+                    <div class="hov1">
+                    <div class="purpl1"> <img src="images/icons8-right-arrow-30.png" alt=""></div>
                     <img class="imghov" src="/images/linkedin-sales-solutions-jJFrkJP_-RA-unsplash-370x470 (2).jpg" alt="">
-                    
+                    </div>
                     <div class="terxt">
                     
                         <div class="mth">
@@ -634,17 +641,18 @@
     </div>
 </section>
 
-<div class="inter">
+<div class="inter" data-aos="zoom-in" data-aos-duration="1500"
+    data-aos-easing="ease-in-out">
     <h1>The International Money <br> Transfer Marketplace.</h1>
     <img class="bag" src="images/Group-35747.png" alt="">
     <button class="free">Join us, its free! <img class="icon" src="images/icons8-right-arrow-30.png" alt=""></button>
-</div>
 <div class="spans">
-    <span class="green"></span>
+           <span class="green"></span>
            <span class="gold"></span>
            <span class="purple"></span>
            <span class="yellow"></span>
            <span class="green2"></span>
+</div>
 </div>
 
 <footer>
@@ -704,6 +712,11 @@
     <div class="copy">
         Copyright@ 2022 | FiatMatch
     </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 <script src="vanilla-tilt.min.js"></script>
 <script src="jquery.js"></script>
