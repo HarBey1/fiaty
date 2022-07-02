@@ -1,45 +1,33 @@
 
-var slideIndex = 2;
-showSlides(slideIndex);
+var Index = 1;
+show(Index);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  show(Index += n);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function slide(n) {
+  show(Index = n);
 }
 
-function showSlides(n) {
+function show(n) {
   var i;
   var slides = document.getElementsByClassName("wraps");
-  var dots = document.getElementsByClassName("swap");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
+  var swap = document.getElementsByClassName("swap");
+  if (n > slides.length) {Index = 1}    
+  if (n < 1) {Index = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+  for (i = 0; i < swap.length; i++) {
+      swap[i].className = swap[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  slides[Index-1].style.display = "block";  
+  swap[Index-1].className += " active";
 }
-
-// Tilt function
-
-// VanillaTilt.init(document.querySelector(".floats"), {
-// 		max: 25,
-// 		speed: 400
-// });
-
-  
 
 
 // scroll section btns
-
-
-// jet-seed-clone.netlify.app
 
 var header = document.getElementById("nums");
 var btns = header.getElementsByClassName("num");
@@ -119,3 +107,28 @@ remove4.addEventListener('click', function () {
     plus4.style.display = 'flex'
   answer4.classList.toggle('active');
 })
+
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("wrapz");
+  var dots = document.getElementsByClassName("cover");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
